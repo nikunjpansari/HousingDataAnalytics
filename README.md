@@ -3,36 +3,6 @@
 An end-to-end walkthrough of building a Housing Data analytics solution in Power BI, sourcing data from Google BigQuery, performing transformations, modeling with DAX, and creating interactive visuals.
 
 ---
-
-## Table of Contents
-
-1. [Project Overview](#project-overview)  
-2. [Prerequisites](#prerequisites)  
-3. [Create Free Google Cloud Account](#create-free-google-cloud-account)  
-3. [SQL in BigQuery for Data Understanding & Transformations](#sql-in-bigquery-for-data-understanding--transformations)  
-4. [Data Cleaning in Power Query Editor](#data-cleaning-in-power-query-editor)  
-5. [Data Modeling & DAX Measures](#data-modeling--dax-measures)  
-   - [YOY Sales Growth](#yoy-sales-growth)  
-   - [Offer Price Column](#offer-price-column)  
-   - [Median Sales Price Change by Region](#median-sales-price-change-by-region)  
-   - [Units Sold (Latest Year & Quarter)](#units-sold-latest-year--quarter)  
-   - [Last 12 Month Sales](#last-12-month-sales)  
-   - [Sales by Region](#sales-by-region)  
-   - [Total YTD Sales](#total-ytd-sales)  
-   - [Offer to SQM Ratio](#offer-to-sqm-ratio)  
-   - [Age Column](#age-column)  
-6. [Report Development](#report-development)  
-   - [Sales Performance Page](#sales-performance-page)  
-   - [Scatter Plot: Offer Price vs. SQM Price](#scatter-plot-offer-price-vs-sqm-price)  
-   - [Median Change by Region Chart](#median-change-by-region-chart)  
-   - [Donut Chart on Sales Performance](#donut-chart-on-sales-performance)  
-   - [Key Influencers Visual](#key-influencers-visual)  
-   - [Clustered Bar: Avg Offer vs. Purchase Price](#clustered-bar-avg-offer-vs-purchase-price)  
-   - [House Type Analysis](#house-type-analysis)  
-7. [Publish to Power BI Service](#publish-to-power bi-service)  
-
----
-
 ## Project Overview
 
 This project demonstrates how to:  
