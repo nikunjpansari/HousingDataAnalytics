@@ -1,0 +1,5 @@
+Sales by Region =
+CALCULATE(
+    SUM( Housing[purchase_price] ),
+    ALLEXCEPT( Housing, Housing[region] )
+)

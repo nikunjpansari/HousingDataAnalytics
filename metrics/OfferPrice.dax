@@ -1,0 +1,4 @@
+Offer Price =
+( 100 * Housing[purchase_price] )
+  /
+( 100 - Housing[%_change_between_offer_and_purchase] )

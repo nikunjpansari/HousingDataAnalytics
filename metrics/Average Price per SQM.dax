@@ -1,0 +1,2 @@
+Average Price SQM =
+AVERAGE( Housing[sqm_price] )

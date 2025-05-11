@@ -1,0 +1,6 @@
+Units sold in latest Year & Quarter =
+CALCULATE(
+    DISTINCTCOUNT( Housing[house_id] ),
+    YEAR( Housing[date (MM/DD/YYYY)] ) = YEAR( MAX( Housing[date (MM/DD/YYYY)] ) )
+      && QUARTER( Housing[date (MM/DD/YYYY)] ) = QUARTER( MAX( Housing[date (MM/DD/YYYY)] ) )
+)

@@ -1,0 +1,17 @@
+YOY_Sales_Growth =
+VAR CurrYearSales =
+    CALCULATE(
+        SUM( Housing[purchase_price] ),
+        YEAR( Housing[date (MM/DD/YYYY)] ) = YEAR( MAX( Housing[date (MM/DD/YYYY)] ) )
+    )
+VAR PrevYearSales =
+    CALCULATE(
+        SUM( Housing[purchase_price] ),
+        YEAR( Housing[date (MM/DD/YYYY)] ) = YEAR( MAX( Housing[date (MM/DD/YYYY)] ) ) - 1
+    )
+RETURN
+    IF(
+        PrevYearSales <> 0,
+        ( CurrYearSales - PrevYearSales ) / PrevYearSales,
+        BLANK()
+    )

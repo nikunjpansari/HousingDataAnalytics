@@ -1,0 +1,27 @@
+Median Sales Price Change =
+VAR CurrMedianPrice =
+    MEDIANX(
+        FILTER(
+            Housing,
+            YEAR( Housing[date (MM/DD/YYYY)].[Date] )
+              = YEAR( MAX( Housing[date (MM/DD/YYYY)].[Date] ) )
+        ),
+        Housing[purchase_price]
+    )
+
+VAR PreMedianPrice =
+    MEDIANX(
+        FILTER(
+            Housing,
+            YEAR( Housing[date (MM/DD/YYYY)].[Date] )
+              = YEAR( MAX( Housing[date (MM/DD/YYYY)].[Date] ) ) - 1
+        ),
+        Housing[purchase_price]
+    )
+
+RETURN
+    IF(
+        PreMedianPrice <> 0,
+        ( CurrMedianPrice - PreMedianPrice ) / PreMedianPrice,
+        BLANK()
+    )

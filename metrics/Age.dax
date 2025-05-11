@@ -1,0 +1,5 @@
+Age =
+ABS(
+    YEAR( Housing[date (MM/DD/YYYY)].[Date] )
+  - Housing[year_build]
+)

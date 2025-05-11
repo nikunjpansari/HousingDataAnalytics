@@ -1,0 +1,5 @@
+Offer to SQM Ratio =
+DIVIDE(
+    SUM( Housing[Offer Price] ),
+    SUM( Housing[sqm] )
+)

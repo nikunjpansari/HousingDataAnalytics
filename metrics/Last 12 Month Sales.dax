@@ -1,0 +1,10 @@
+Last 12 Month Sales =
+CALCULATE(
+    SUM( Housing[purchase_price] ),
+    DATESINPERIOD(
+        Housing[date (MM/DD/YYYY)].[Date],
+        MAX( Housing[date (MM/DD/YYYY)].[Date] ),
+        -12,
+        MONTH
+    )
+)

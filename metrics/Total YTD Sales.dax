@@ -1,0 +1,5 @@
+TotalYTD Sales =
+TOTALYTD(
+    SUM( Housing[purchase_price] ),
+    Housing[date (MM/DD/YYYY)].[Date]
+)
